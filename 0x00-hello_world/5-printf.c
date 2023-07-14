@@ -1,11 +1,10 @@
 #include <stdio.h>
 /**
  *main - This is the main starting point
- *return:Should always return 0 for success
+ *return: Should always return 0 for success
  */
 int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");
 	return (0);
-{
-
+}
