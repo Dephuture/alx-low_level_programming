@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_diagonal - checks whether is upper
+ * print_square - checks whether is upper
  * @size: number of lines
  * Return: returns 0 when upper  and 1 when not
  */
