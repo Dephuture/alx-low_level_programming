@@ -1,22 +1,33 @@
-#include "main.h"
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 /**
- * *_strcpy - accepts pointers
- * @dest: take a point
- * @src: takes int
+ * main - accepts pointers
+ * Description: password generator for 101-crackme
  * Return: returns 0 if successf
  */
 
-char *_strcpy(char *dest, char *src)
+int main(void)
 {
-	char *original_dest = dest;
+	int pass[100];
+	int i, sum, n;
 
-	while (*src != '\0')
+	sum = 0;
+
+	srand(time(NULL));
+
+	for (i = 0; i < 100; i++)
 	{
-		*dest = *src;
-		src++;
-		dest++;
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
+		if ((2772 - sum) - '0' < 78)
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
+			break;
+		}
 	}
-	*dest = '\0';
-	return (original_dest);
+	return (0);
 }
