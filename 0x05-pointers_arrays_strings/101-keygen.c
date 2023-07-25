@@ -1,25 +1,22 @@
 #include "main.h"
-#include <stdlib.h>
 #include <stdio.h>
 /**
- * generate_password - accepts pointers
- * @length: take a point
+ * *_strcpy - accepts pointers
+ * @dest: take a point
+ * @src: takes int
  * Return: returns 0 if successf
  */
 
-char* generate_password(int length)
+char *_strcpy(char *dest, char *src)
 {
-	static const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-	char* password = malloc(length + 1);
-	
-	if (password != NULL)
+	char *original_dest = dest;
+
+	while (*src != '\0')
 	{
-		for (int i = 0; i < length; i++)
-		{
-			int index = rand() % (sizeof(charset) - 1);
-			password[i] = charset[index];
-		}
-		password[length] = '\0';
+		*dest = *src;
+		src++;
+		dest++;
 	}
-	return password;
+	*dest = '\0';
+	return (original_dest);
 }
