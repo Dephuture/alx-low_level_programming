@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strle - accepts pointers
+ * _strlen - accepts pointers
  * @s: take a point
  * Return: returns 0 if successf
  */
