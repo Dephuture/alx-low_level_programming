@@ -2,6 +2,7 @@
 /**
  * print_number - Prints an integer using _putchar function.
  * @n: The integer to be printed.
+ * Return: success is always 0
  */
 
 void print_number(int n)
