@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *strncpy - this concatenate strings
+ * *_strncpy - this concatenate strings
  * @dest: take a string
  * @n: the max number
  * @src: takes a string
