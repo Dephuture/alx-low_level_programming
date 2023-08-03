@@ -1,21 +1,32 @@
 #include "main.h"
 
-/**
- * is_prime_number - works as
- * @n: takes an int
- * @divisor: takes int
- * Return: returns 0 when successful
- */
+int actual_prime(int n, int i);
 
-int is_prime_number(int n, int divisor)
+/**
+ * is_prime_number - prime number
+ * @n:takes int
+ *
+ * Return: 0 for success
+ */
+int is_prime_number(int n)
 {
-	if (divisor <= 1)
-	{
-		return (1);
-	}
-	if (n % divisor == 0)
-	{
+	if (n <= 1)
 		return (0);
-	}
-	return (is_prime_number(n, divisor - 1));
+	return (actual_prime(n, n - 1));
+}
+
+/**
+ * actual_prime - calculates if
+ * @n: number
+ * @i: iterator
+ *
+ * Return: 1 if n is, 0 if not
+ */
+int actual_prime(int n, int i)
+{
+	if (i == 1)
+		return (1);
+	if (n % i == 0 && i > 0)
+		return (0);
+	return (actual_prime(n, i - 1));
 }
